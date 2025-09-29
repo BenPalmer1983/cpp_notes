@@ -1,0 +1,108 @@
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+
+void my_function(std::vector<int>& my_vec)
+{
+    std::cout << "new_vec location in function:  " << &my_vec << std::endl;  // prints 4
+    std::cout << "new_vec size in function:      " << my_vec.size() << std::endl;  // prints 4
+    for (size_t i = 0; i < my_vec.size(); i++) 
+    {
+        std::cout << "   my_vec " << i << " at " << &my_vec[i]
+                  << " with value " << my_vec[i] << std::endl;
+    }
+}
+
+
+
+void matrix_function(const double (&matrix)[3][3])
+{
+    std::cout << "mat location in function:  " << &matrix << std::endl;  
+}
+
+
+
+int main(int argc, char* argv[])
+{
+
+    // lvalues, rvalues
+    int x = 10;         // x lvalue, 10 rvalue
+
+    std::cout << "x:                             " << x << std::endl;  // prints 10
+    std::cout << "memory location of x:          " << &x << std::endl;  // prints 10
+
+
+    // Can reference lvalues
+    
+    int& x_ref = x;
+
+    x_ref = 20;
+
+    std::cout << "x_ref:                         " << x_ref <<  std::endl;  // prints 20
+    std::cout << "memory location of x_ref:      " << &x_ref << std::endl;  // prints 10
+
+
+    //int& ref_fails = 9;    // Cannot reference an rvalue in the normal way
+
+
+    //
+    const int& const_ref = 5;    
+    std::cout << "const_ref:                     " << const_ref << std::endl;  // prints 20
+    std::cout << "const_ref location:            " << &const_ref << std::endl;  // prints 20
+
+
+    int&& ref_to_rvalue = 7;    
+    std::cout << "ret_to_rvalue:                 " << ref_to_rvalue << std::endl;  // prints 7
+    std::cout << "ret_to_rvalue location:        " << &ref_to_rvalue << std::endl; 
+
+
+    std::vector<int> vec = {1, 2, 3, 4};
+    std::cout << "vec size:                      " << vec.size() << std::endl;  // prints 4
+    std::cout << "vec location:                  " << &vec << std::endl; 
+
+    for (size_t i = 0; i < vec.size(); i++) 
+    {
+        std::cout << "   vec " << i << " at " << &vec[i]
+                  << " with value " << vec[i] << std::endl;
+    }
+
+
+    std::vector<int> new_vec = std::move(vec);
+    std::cout << "vec location:                  " << &vec << std::endl;  
+    std::cout << "new_vec location:              " << &new_vec << std::endl;  
+    std::cout << "vec size:                      " << vec.size() << std::endl;      // prints 0
+    std::cout << "new_vec size:                  " << new_vec.size() << std::endl;  // prints 4
+
+    for (size_t i = 0; i < new_vec.size(); i++) 
+    {
+        std::cout << "   new_vec " << i << " at " << &new_vec[i]
+                  << " with value " << new_vec[i] << std::endl;
+    }
+
+    
+    my_function(new_vec);
+
+
+    const double mat[3][3] = 
+    {
+        {1.0, 2.0, 3.0},
+        {4.0, 5.0, 6.0},
+        {7.0, 8.0, 9.0}
+    };
+
+    std::cout << "mat location:              " << &mat << std::endl;  
+
+
+    matrix_function(mat);
+
+
+
+    return 0;
+}
+
+
+
+
+
