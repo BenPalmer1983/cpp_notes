@@ -5,16 +5,15 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-include(CTest)  # defines BUILD_TESTING
 
 add_subdirectory(src)
 
-if(BUILD_TESTING)
-    set(INSTALL_GTEST OFF CACHE BOOL "Disable gtest install" FORCE)
-    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-    add_subdirectory(
-        ../external/googletest
-        ${CMAKE_BINARY_DIR}/external/googletest
-    )
-    add_subdirectory(src_tests)
-endif()
+
+enable_testing()
+set(INSTALL_GTEST OFF CACHE BOOL "Disable gtest install" FORCE)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+add_subdirectory(
+    ../external/googletest
+    ${CMAKE_BINARY_DIR}/external/googletest
+)
+add_subdirectory(src_tests)

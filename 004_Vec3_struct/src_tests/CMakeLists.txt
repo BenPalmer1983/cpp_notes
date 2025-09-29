@@ -1,4 +1,4 @@
-include(CTest)
+
 include(GoogleTest)
 
 # Recursively collect all .cpp files under src_tests/

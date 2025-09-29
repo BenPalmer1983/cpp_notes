@@ -15,6 +15,12 @@ public:
 
     std::string get_type() const override { return "Giraffe"; }
 
+
+    void eat(size_t meal_counter) override
+    {
+        _food_eaten = meal_counter * 1.5;  // kg
+    };
+
 };
 
 

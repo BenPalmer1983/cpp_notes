@@ -31,18 +31,28 @@ int main()
 
     std::cout << "Create animals" << std::endl;
 
-    auto zebra = std::make_unique<Zoo::Zebra>("Zippy", 4);
+    // Create Zoo::Zebra zebra on the heap
+    std::unique_ptr<Zoo::Zebra> zebra(new Zoo::Zebra("Zippy", 4));
+
+    // Alternatively
     auto giraffe = std::make_unique<Zoo::Giraffe>("Gerald", 4);
     auto owl = std::make_unique<Zoo::Owl>("Olive", 4);
     auto tiger = std::make_unique<Zoo::Tiger>("Timmy", 14);
 
+    // Feed animals
+    zebra->eat(3);
+    owl->eat(2);
+    tiger->eat(5);
 
+    std::cout << "Adding animals to Zoo." << std::endl;
 
     zoo.add_animal(std::move(zebra));
     zoo.add_animal(std::move(giraffe));
     zoo.add_animal(std::move(owl));
     zoo.add_animal(std::move(tiger));
 
+
+    std::cout << "Zoo in memory:  " << &zoo << std::endl;
     zoo.list_animals();
 
 
