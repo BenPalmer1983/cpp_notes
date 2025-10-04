@@ -1,0 +1,20 @@
+1) Basic ternary example
+a = 5  positive
+a = 0  non-positive
+a = -1  non-positive
+2) Equivalent if/else
+a = -1  non-positive
+3) Ternary with integers
+b = -3  abs(b) = 3
+4) Nesting ternaries 
+grade = 82  letter grade = B
+5) Equivalent if/else grading
+grade = 82  letter grade = B
+6) Ternary returning different types
+val = 3.14
+7) Ternary inside loops
+1 is odd
+2 is even
+3 is odd
+4 is even
+5 is odd

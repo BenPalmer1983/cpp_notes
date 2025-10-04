@@ -1,0 +1,17 @@
+1) Basic switch over int
+code is 2
+2) Grouping cases (multiple labels)
+Weekend
+3) Fallthrough vs break
+Level 1 setup
+4) switch on char (simple menu)
+Save file
+5) switch with enum class (strongly-typed enums)
+Color is Green
+6) switch with initializer (C++17)
+17 % 3 = 2
+7) switch vs string note
+Extension: png
+Image: PNG
+8) Common pitfalls
+Done: switch/case tutorial complete

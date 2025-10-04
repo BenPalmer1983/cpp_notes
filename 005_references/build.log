@@ -1,0 +1,37 @@
+x:                             10
+memory location of x:          0x7ffee326dda4
+x_ref:                         20
+memory location of x_ref:      0x7ffee326dda4
+const_ref:                     5
+const_ref location:            0x7ffee326dda8
+ret_to_rvalue:                 7
+ret_to_rvalue location:        0x7ffee326ddac
+vec size:                      4
+vec location:                  0x7ffee326ddd0
+   vec 1 at 0x5f9ffb9d72c4 with value 2
+   vec 2 at 0x5f9ffb9d72c8 with value 3
+   vec 3 at 0x5f9ffb9d72cc with value 4
+   vec 4 at 0x5f9ffb9d72d0 with value 0
+
+Moving vec to new_vec
+vec location:                  0x7ffee326ddd0
+new_vec location:              0x7ffee326ddf0
+vec size:                      0
+new_vec size:                  4
+   new_vec 1 at 0x5f9ffb9d72c4 with value 2
+   new_vec 2 at 0x5f9ffb9d72c8 with value 3
+   new_vec 3 at 0x5f9ffb9d72cc with value 4
+   new_vec 4 at 0x5f9ffb9d72d0 with value 0
+
+Passing new_vec to a function
+new_vec location in function:  0x7ffee326ddf0
+new_vec size in function:      4
+   new_vec 1 at 0x5f9ffb9d72c4 with value 2
+   new_vec 2 at 0x5f9ffb9d72c8 with value 3
+   new_vec 3 at 0x5f9ffb9d72cc with value 4
+   new_vec 4 at 0x5f9ffb9d72d0 with value 0
+
+Creating an array
+mat location:              0x7ffee326de10
+Passing mat to a function
+mat location in function:  0x7ffee326de10

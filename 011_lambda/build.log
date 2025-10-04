@@ -1,0 +1,44 @@
+1) Basic lambda: no capture, no params
+Hello from a lambda!
+
+2) Parameters and inferred return type (int)
+add(2, 3) = 5
+
+safe_divide(10, 2) = 5
+safe_divide(10, 0) = 0
+3) Capture list: [], [=], [&], and mixed.
+No capture: only local params/body
+By value: x+y = 30 (inside lambda)
+After by_value: x=10 y=20
+By ref:   x=11 y=22 (modified)
+After by_ref: x=11 y=22
+Mixed: x(copy)=11 y(ref)=22
+After by_ref: x=11 y=22
+
+4) Mutable lambdas (modify captured-by-value)
+Inside mutable lambda, counter copy = 5
+Original counter still = 0 (unchanged)
+
+5) Capture with an initializer - e.g. initialise a string
+***center***
+Unique ptr value = 42
+ptr_src is null (moved)
+
+6) Generic lambda (auto parameters)
+print_any: 123
+print_any: 3.14159
+print_any: hello
+forward_into(twice, 21) = 42
+7) Lambdas with STL algorithms 
+Sorted desc: 5 4 3 2 1 
+Squares:    25 16 9 4 1 
+Sum: 15
+
+--- 8) Immediately-Invoked Lambda (IILE) ---
+Immediate call result = 21
+
+--- 9) Returning a lambda (closure carrying state) ---
+add10(32) = 42
+
+--- 10) Capturing this (in a small local struct demo) ---
+Acc.total = 12

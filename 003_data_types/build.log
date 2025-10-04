@@ -1,0 +1,24 @@
+Create an integer and use default value (0).
+my_integer_a: 0
+
+Create an integer and give a value (10).
+my_integer_b: 10
+
+Change value to 100.
+my_integer_b: 100
+
+Create a bool (default is true).
+
+Create a bool give value false.
+flag_b is false
+1234
+Create a double with default value.
+my_double: 0
+
+Change value to 123.4
+my_double: 123
+
+Create a string.
+my_string_a: 
+Create a string.
+my_string_b: test string 1234

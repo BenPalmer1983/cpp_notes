@@ -1,0 +1,22 @@
+1) Function template
+add(2, 3) = 5
+add(2.5, 3.1) = 5.6
+
+2) Class template
+int_box = 42
+str_box = Hello
+
+giraffe identifier =  52342
+giraffe age =         8
+
+lion identifier =  AAB
+lion age =         8
+
+3) Template specialisation
+true
+false
+
+4) C++20 concept with template
+multiply(3, 4) = 12
+multiply(2.5, 1.5) = 3.75
+

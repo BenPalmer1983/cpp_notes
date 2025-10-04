@@ -1,0 +1,15 @@
+1) Basic if ---
+a is positive (5)
+2) if / else ---
+a is odd
+3) if / else if / else chain ---
+Grade B
+--- 4) Nested if statements ---
+Both x and y are positive
+--- 5) if with logical operators ---
+Sunny but chilly.
+6) if with variable initialization (C++17+) ---
+n = 3 is odd
+7) constexpr if (C++17+) ---
+42 is an integral type
+3.14 is NOT an integral type

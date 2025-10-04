@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.20)
+project(Vec3Struct VERSION 0.1.0 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+include(CTest)  # defines BUILD_TESTING
+
+add_subdirectory(src)
+
