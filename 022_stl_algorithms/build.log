@@ -1,0 +1,82 @@
+Useful STL algorithms with integers
+###################################################
+
+Sort
+1 
+1 
+2 
+3 
+5 
+5 
+5 
+6 
+6 
+9 
+12 
+24 
+Reverse
+24 12 9 6 6 5 5 5 3 2 1 1 
+Find
+Found 5 at index 5
+Count
+There are 3 occurrences of 5
+Accumulate (sum)
+Sum = 79
+Min_element
+Min = 1
+Max_element
+Max = 24
+All of
+All positive? 1
+All even? 0
+All negative? 0
+Any of
+Any positive? 1
+Any even? 1
+Any negative? 1
+None of
+None positive? 0
+None even? 0
+None negative? 0
+8) remove / erase idiom
+24 12 9 6 6 3 2 1 1 
+9) unique
+1 2 3 4 
+10) transform
+576 144 81 36 36 9 4 1 1 
+11) for_each
+[24] [12] [9] [6] [6] [3] [2] [1] [1] 
+12) partition
+8 2 6 4 5 3 7 1 9 
+13) binary_search (on sorted data)
+Found 4? 1
+14) next_permutation
+123 132 213 231 312 321 
+Useful STL algorithms with integers
+###################################################
+
+Create a vector of Zoo::Zebra objects
+Original order:
+   Alice (age 5)
+   Bob (age 3)
+   Charlie (age 7)
+   Daisy (age 4)
+
+Sort by name (ascending):
+   Alice (age 5)
+   Bob (age 3)
+   Charlie (age 7)
+   Daisy (age 4)
+
+Sort by age (ascending):
+   Bob (age 3)
+   Daisy (age 4)
+   Alice (age 5)
+   Charlie (age 7)
+
+Sort by age (descending):
+   Charlie (age 7)
+   Alice (age 5)
+   Daisy (age 4)
+   Bob (age 3)
+

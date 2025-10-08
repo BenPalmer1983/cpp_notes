@@ -1,0 +1,40 @@
+Create an empty string.
+empty: "" (size = 0)
+
+Create a string with text.
+hello: Hello (size = 5)
+
+Concatenate two strings.
+message: Hello, World!
+
+Access individual characters (0-based).
+message[0]: H
+message[7]: W
+
+Change characters by index.
+modified message: hello, World!
+
+Append, find, substr.
+after append: C++ strings are powerful. Indeed!
+find 'strings': position 4
+find 'Strings': position 18446744073709551615
+End position: 18446744073709551615
+substr(4,7): strings
+
+Convert number to string and back.
+to_string(123): 123
+stoi("456"): 456
+
+argv-style char* to std::string.
+Converted: command_line_argument
+
+string_view example (no copy).
+string_view: command_line_argument (size = 21)
+
+from_chars example (parsing integers).
+Parsed number: 123456789
+First unparsed char (ptr): ' '
+
+Parsed number: 1234
+First unparsed char (ptr): 'A'
+
