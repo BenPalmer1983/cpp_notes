@@ -1,0 +1,18 @@
+=== static_cast Basics ===
+pi as double: 3.14159
+pi as int   : 3
+
+Old-style cast result: 3
+
+Character: A  ->  ASCII code: 65
+Next character after 'A': B
+
+Address of number: 0x7ffecb948c24
+Value of number:   42
+
+10 divided by 3 (with static_cast): 3.33333
+10 divided by 3 (integer division): 3
+
+Color::Green has integer value: 2
+
+End of program.

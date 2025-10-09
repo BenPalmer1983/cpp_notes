@@ -4,8 +4,10 @@ set -Eeuo pipefail
 trap 'echo "ERROR on line $LINENO (exit code $?)" >&2' ERR
 {
 
-    g++ DataTypes.cpp -o DataTypes.x
-    ./DataTypes.x
+    g++ Enumerations.cpp -o Enumerations.x
+    ./Enumerations.x
 
 } 2>&1 | tee build.log
+
+
 

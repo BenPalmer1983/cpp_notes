@@ -22,3 +22,12 @@ Create a string.
 my_string_a: 
 Create a string.
 my_string_b: test string 1234
+
+my_int_parameter_1:    0
+my_int_parameter_2:    123
+my_double_parameter_1:    123.4
+
+my_scope_restricted_int:    1
+my_scope_restricted_int:    2
+my_scope_restricted_int:    3
+

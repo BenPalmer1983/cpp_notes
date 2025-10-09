@@ -5,9 +5,12 @@
 int main(int argc, char* argv[])
 {
 
-    // Variables can be created where they are needed
+    // Variables should be defined where they are needed.
+    // They can only be created once in the same scope.
+    // Initialise using curly brackets.
 
-    // Integers
+
+    // Creating integers as they are needed.    
 
     std::cout << "Create an integer and use default value (0)." <<std::endl;
     int my_integer_a {};
@@ -18,6 +21,8 @@ int main(int argc, char* argv[])
     int my_integer_b {10};
     std::cout << "my_integer_b: " << my_integer_b << "\n" << std::endl;
 
+
+    // Assign a value to an existing integer
 
     std::cout << "Change value to 100." <<std::endl;
     my_integer_b = 100;
@@ -71,10 +76,48 @@ int main(int argc, char* argv[])
     std::cout << "Create a string." <<std::endl;
     std::string my_string_b {"test string 1234"};
     std::cout << "my_string_b: " << my_string_b <<std::endl;
+    std::cout << std::endl;
 
 
+    // Constants
+    // To fix the value of an integer, double etc, use the const keyword.
+    const int my_int_parameter_1 {};
+    std::cout << "my_int_parameter_1:    " << my_int_parameter_1 <<std::endl;
 
 
+    const int my_int_parameter_2 {123};
+    std::cout << "my_int_parameter_2:    " << my_int_parameter_2 <<std::endl;
+
+
+    const double my_double_parameter_1 {123.4};
+    std::cout << "my_double_parameter_1:    " << my_double_parameter_1 <<std::endl;
+    std::cout << std::endl;
+
+
+    // Compoun statements / block
+
+    //  The scope of a variable will be restricted to a function.
+    //  e.g. if double x {}; is declared in one function, it won't normally be accessible elsewhere.
+    //  Compound statements can be used to restrict scope inside a function.
+
+
+    {
+        int my_scope_restricted_int {1};
+        std::cout << "my_scope_restricted_int:    " << my_scope_restricted_int <<std::endl;
+    }
+
+    {
+        const int my_scope_restricted_int {2};
+        std::cout << "my_scope_restricted_int:    " << my_scope_restricted_int <<std::endl;
+    }
+
+    {
+        int my_scope_restricted_int {3};
+        std::cout << "my_scope_restricted_int:    " << my_scope_restricted_int <<std::endl;
+    }
+
+
+    std::cout << std::endl;
 }
 
 

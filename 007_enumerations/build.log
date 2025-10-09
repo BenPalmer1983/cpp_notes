@@ -1,0 +1,13 @@
+=== Enumerations (enum) ===
+Heading North!
+Numeric value of North: 0
+Now heading West (value 3)
+
+Status code (NotFound): 404
+
+The paint is green!
+Numeric value of Color::Green: 1
+
+Stop!
+
+End of program.

@@ -4,8 +4,7 @@ set -Eeuo pipefail
 trap 'echo "ERROR on line $LINENO (exit code $?)" >&2' ERR
 {
 
-    g++ DataTypes.cpp -o DataTypes.x
-    ./DataTypes.x
+    g++ FunctionsIntroduction.cpp -o FunctionsIntroduction.x
+    ./FunctionsIntroduction.x
 
 } 2>&1 | tee build.log
-
