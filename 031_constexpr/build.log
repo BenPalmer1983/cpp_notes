@@ -1,0 +1,27 @@
+constexpr variables (compile-time constants).
+a: 10, b: 20, c=a+b: 30
+
+
+constexpr functions (can run at compile time or runtime).
+square(4) [constexpr]: 16
+square(7)   [runtime]:    49
+
+
+constexpr with conditional logic (no dynamic features inside).
+min_ce(12,5): 5
+
+
+Use constexpr values as array sizes (std::array).
+arr: [1, 2, 3, 4, 5]
+
+
+constexpr Fibonacci for small n (illustration).
+fib(5)  [constexpr]: 5
+fib(8)  [runtime]:   21
+
+
+constexpr vs const.
+const may_be_runtime = 42 (runtime init), constexpr truly_constexpr = 42 (compile-time).
+OK to use constexpr as non-type template args (e.g. std::array size).
+
+

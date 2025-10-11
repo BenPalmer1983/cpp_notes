@@ -1,0 +1,72 @@
+Pass vector by value (copy).
+Original size (before): 3
+    [inspect_vector]
+        address of v (vector object)      : 0x7ffdcbbaace0
+        v.size()                           : 3
+        v.capacity()                       : 3
+        v.data() (buffer start)            : 0x6398ebc522c0
+        v[0] at 0x6398ebc522c0 = 1
+        v[1] at 0x6398ebc522c4 = 2
+        v[2] at 0x6398ebc522c8 = 3
+
+  Inside modify_by_value: push_back(99).
+  Copy size: 4
+Original size (after):  3
+
+    [inspect_vector]
+        address of v (vector object)      : 0x7ffdcbbaace0
+        v.size()                           : 3
+        v.capacity()                       : 3
+        v.data() (buffer start)            : 0x6398ebc522c0
+        v[0] at 0x6398ebc522c0 = 1
+        v[1] at 0x6398ebc522c4 = 2
+        v[2] at 0x6398ebc522c8 = 3
+
+
+Pass vector by reference (modifies original).
+Size (before): 3
+    [inspect_vector]
+        address of v (vector object)      : 0x7ffdcbbaad00
+        v.size()                           : 3
+        v.capacity()                       : 3
+        v.data() (buffer start)            : 0x6398ebc522c0
+        v[0] at 0x6398ebc522c0 = 10
+        v[1] at 0x6398ebc522c4 = 20
+        v[2] at 0x6398ebc522c8 = 30
+
+  Inside modify_in_place: push_back(40), push_back(50).
+  Same object size: 5
+    [inspect_vector]
+        address of v (vector object)      : 0x7ffdcbbaad00
+        v.size()                           : 5
+        v.capacity()                       : 6
+        v.data() (buffer start)            : 0x6398ebc52300
+        v[0] at 0x6398ebc52300 = 10
+        v[1] at 0x6398ebc52304 = 20
+        v[2] at 0x6398ebc52308 = 30
+        v[3] at 0x6398ebc5230c = 40
+        v[4] at 0x6398ebc52310 = 50
+
+Size (after):  5
+    [inspect_vector]
+        address of v (vector object)      : 0x7ffdcbbaad00
+        v.size()                           : 5
+        v.capacity()                       : 6
+        v.data() (buffer start)            : 0x6398ebc52300
+        v[0] at 0x6398ebc52300 = 10
+        v[1] at 0x6398ebc52304 = 20
+        v[2] at 0x6398ebc52308 = 30
+        v[3] at 0x6398ebc5230c = 40
+        v[4] at 0x6398ebc52310 = 50
+
+Contents: [10, 20, 30, 40, 50]
+
+
+Use const reference for read-only functions.
+Vector: [5, 4, 3, 2, 1]
+
+
+Return a new vector from a function.
+New vector: [100, 101, 102, 103, 104]
+
+

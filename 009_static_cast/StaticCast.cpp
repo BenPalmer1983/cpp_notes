@@ -13,8 +13,23 @@
 
 #include <iostream>
 
-int main()
+
+// Main entry point into program
+int main(int argc, char* argv[])
 {
+
+    // Option to run with Verbose
+    bool verbose = false;
+    for (int i = 1; i < argc; ++i)
+    {
+        std::string arg {argv[i]};
+        if (arg == "-v" || arg == "--verbose")
+        {
+            verbose = true;
+        }
+    }
+    
+
     std::cout << "=== static_cast Basics ===" << std::endl;
 
     // -----------------------------------------------------

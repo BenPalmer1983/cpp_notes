@@ -1,0 +1,55 @@
+1) Sum via const reference (no copy).
+    [sum_vector]
+        address of v (vector object): 0x7fff7d0298a0
+        size/capacity: 4/4
+        data() (buffer start): 0x596a6dcf52c0
+
+Sum: 10
+
+
+
+2) Modify via non-const reference (in-place).
+Before: [7, 7, 7]
+[inspect_vector]
+  address of v (the vector object) : 0x7fff7d0298a0
+  v.size()                          : 3
+  v.data() (buffer start)           : 0x596a6dcf52c0
+    v[0] at 0x596a6dcf52c0 = 7
+    v[1] at 0x596a6dcf52c4 = 7
+    v[2] at 0x596a6dcf52c8 = 7
+
+[inspect_vector]
+  address of v (the vector object) : 0x7fff7d0298a0
+  v.size()                          : 3
+  v.data() (buffer start)           : 0x596a6dcf52c0
+    v[0] at 0x596a6dcf52c0 = 42
+    v[1] at 0x596a6dcf52c4 = 42
+    v[2] at 0x596a6dcf52c8 = 42
+
+After:  [42, 42, 42]
+
+
+
+3) Overload on constness (int& vs int).
+    [note] Modified first element through non-const reference.
+v[0] 123 at 0x596a6dcf52c0  (modified by changing r)
+r    123 at 0x596a6dcf52c0
+
+    [note] Const overload returns a copy; modifying it won't affect vector.
+v: [123, 8, 7]
+copy of front: 123
+
+v[0] 123 at 0x596a6dcf52c0
+copy 123 at 0x7fff7d02984c
+
+v: [123, 8, 7]  (not modified by changing copy)
+copy of front: 321
+
+
+
+4) Const reference prevents mutation.
+[1, 2, 3]
+Read-only operations are OK.
+
+
+

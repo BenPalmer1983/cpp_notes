@@ -1,7 +1,13 @@
 
 #include <iostream>
 #include <string>
-#include <vector>        
+#include <vector>      
+
+
+// Prototypes
+void inspect_int(int& value);
+void inspect_int_vector(std::vector<int>& v);
+
 
 int main(int argc, char* argv[])
 {
@@ -83,6 +89,34 @@ int main(int argc, char* argv[])
 
 }
 
+
+
+
+
+
+// Inspect
+void inspect_int(int& value)
+{
+    std::cout << "Value: " << value << "    address: " << &value << std::endl;
+}
+
+
+void inspect_int_vector(std::vector<int>& v)
+{
+    std::cout << "[inspect_vector]\n";
+    std::cout << "  address of v (the vector object) : " << &v << '\n';
+    std::cout << "  v.size()                          : " << v.size() << '\n';
+
+    // Cast v.data() to void* pointer (generic memory address) and promise not to modify data through pointer (const)
+    std::cout << "  v.data() (buffer start)           : " << static_cast<const void*>(v.data()) << '\n';
+
+    for (std::size_t i = 0; i < v.size(); i++)
+    {
+        std::cout << "    v[" << i << "] at " << static_cast<const void*>(&v[i])
+                  << " = " << v[i] << '\n';
+    }
+    std::cout << '\n';
+}
 
 
 

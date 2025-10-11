@@ -1,57 +1,60 @@
 x value                       : 10
-address of x                  : 0x7fffe6f0e384
+address of x                  : 0x7fff41a17d08
+
 
 x_ref value (after write)     : 20
-address of x_ref              : 0x7fffe6f0e384 (same as x)
+address of x_ref              : 0x7fff41a17d08 (same as x)
+x value (after write)         : 20
+address of x                  : 0x7fff41a17d08
 
 const_ref (to rvalue 5)       : 5
-address of const_ref          : 0x7fffe6f0e388
+address of const_ref          : 0x7fff41a17d0c
 
 rref (rvalue reference)       : 7
-address of rref               : 0x7fffe6f0e38c
+address of rref               : 0x7fff41a17d10
 
 [before move]
-  address of vec (object)           : 0x7fffe6f0e3c0
+  address of vec (object)           : 0x7fff41a17d50
   vec.size()                        : 4
-  vec.data() (buffer start)         : 0x594c242982c0
-    vec[0] at 0x594c242982c0 = 1
-    vec[1] at 0x594c242982c4 = 2
-    vec[2] at 0x594c242982c8 = 3
-    vec[3] at 0x594c242982cc = 4
+  vec.data() (buffer start)         : 0x62569f7722c0
+    vec[0] at 0x62569f7722c0 = 1
+    vec[1] at 0x62569f7722c4 = 2
+    vec[2] at 0x62569f7722c8 = 3
+    vec[3] at 0x62569f7722cc = 4
 
 Moving vec into new_vec...
 
 [after move]
-  address of vec (moved-from)       : 0x7fffe6f0e3c0
+  address of vec (moved-from)       : 0x7fff41a17d50
   vec.size()                        : 0  (valid but unspecified state; size is often 0)
   vec.data()                        : 0
-  address of new_vec                : 0x7fffe6f0e3e0
+  address of new_vec                : 0x7fff41a17d70
   new_vec.size()                    : 4
-  new_vec.data()                    : 0x594c242982c0
-    new_vec[0] at 0x594c242982c0 = 1
-    new_vec[1] at 0x594c242982c4 = 2
-    new_vec[2] at 0x594c242982c8 = 3
-    new_vec[3] at 0x594c242982cc = 4
+  new_vec.data()                    : 0x62569f7722c0
+    new_vec[0] at 0x62569f7722c0 = 1
+    new_vec[1] at 0x62569f7722c4 = 2
+    new_vec[2] at 0x62569f7722c8 = 3
+    new_vec[3] at 0x62569f7722cc = 4
 
 Passing new_vec to inspect_vector...
 
 [inspect_vector]
-  address of v (the vector object) : 0x7fffe6f0e3e0
+  address of v (the vector object) : 0x7fff41a17d70
   v.size()                          : 4
-  v.data() (buffer start)           : 0x594c242982c0
-    v[0] at 0x594c242982c0 = 1
-    v[1] at 0x594c242982c4 = 2
-    v[2] at 0x594c242982c8 = 3
-    v[3] at 0x594c242982cc = 4
+  v.data() (buffer start)           : 0x62569f7722c0
+    v[0] at 0x62569f7722c0 = 1
+    v[1] at 0x62569f7722c4 = 2
+    v[2] at 0x62569f7722c8 = 3
+    v[3] at 0x62569f7722cc = 4
 
 Creating a 3x3 array and passing it by reference...
-address of mat (3x3 array)         : 0x7fffe6f0e400
+address of mat (3x3 array)         : 0x7fff41a17d90
 mat[0][0]                          : 1
 mat[2][2]                          : 9
 
 Passing mat to matrix_function...
 
 [matrix_function]
-  address of matrix (3x3 array)     : 0x7fffe6f0e400
+  address of matrix (3x3 array)     : 0x7fff41a17d90
   matrix[1][2]                      : 6
 

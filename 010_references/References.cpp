@@ -8,7 +8,7 @@
 #include <utility>  // for std::move
 
 // Pass-by-reference: we see the same vector object (no copy)
-void inspect_vector(std::vector<int>& v)
+void inspect_vector(const std::vector<int>& v)
 {
     std::cout << "[inspect_vector]\n";
     std::cout << "  address of v (the vector object) : " << &v << '\n';
@@ -33,20 +33,39 @@ void matrix_function(const double (&matrix)[3][3])
     std::cout << "  matrix[1][2]                      : " << matrix[1][2] << "\n\n";
 }
 
-int main(int /*argc*/, char* /*argv*/[])
+
+// Main entry point into program
+int main(int argc, char* argv[])
 {
+
+    // Option to run with Verbose
+    bool verbose = false;
+    for (int i = 1; i < argc; ++i)
+    {
+        std::string arg {argv[i]};
+        if (arg == "-v" || arg == "--verbose")
+        {
+            verbose = true;
+        }
+    }
+
+
     // -----------------------------------------------------
     // lvalues and rvalues, and references
     // -----------------------------------------------------
     int x = 10;                  // x is an lvalue; 10 is an rvalue
     std::cout << "x value                       : " << x << '\n';
     std::cout << "address of x                  : " << &x << "\n\n";
+    std::cout << std::endl;
 
     // Lvalue reference binds to an lvalue
     int& x_ref = x;
     x_ref = 20;
     std::cout << "x_ref value (after write)     : " << x_ref << '\n';
-    std::cout << "address of x_ref              : " << &x_ref << " (same as x)\n\n";
+    std::cout << "address of x_ref              : " << &x_ref << " (same as x)\n";
+    std::cout << "x value (after write)         : " << x << '\n';
+    std::cout << "address of x                  : " << &x << "\n";
+    std::cout << std::endl;
 
     // const lvalue reference can bind to a temporary (rvalue) and extend its lifetime
     const int& const_ref = 5;    // temporary lives as long as const_ref
