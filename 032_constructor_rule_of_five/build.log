@@ -1,0 +1,207 @@
+=== Rule of Five Demonstration ===
+
+-----------------------------------------------------
+Construct z1 and z2
+-----------------------------------------------------
+Constructing Zebra: Zippy (age 5)
+Constructing Zebra: Arthur (age 7)
+[inspect_zebra]
+  z1
+  address of z (the Zebra object)   : 0x7ffd12ac7e60
+  address of _name member           : 0x7ffd12ac7e60
+  address of _age  member           : 0x7ffd12ac7e80
+  _name.data() (string buffer)      : 0x7ffd12ac7e70
+  _name.size()                      : 5
+  _age                              : 5
+  _name value                       : Zippy
+
+[inspect_zebra]
+  z2
+  address of z (the Zebra object)   : 0x7ffd12ac7e90
+  address of _name member           : 0x7ffd12ac7e90
+  address of _age  member           : 0x7ffd12ac7eb0
+  _name.data() (string buffer)      : 0x7ffd12ac7ea0
+  _name.size()                      : 6
+  _age                              : 7
+  _name value                       : Arthur
+
+
+
+-----------------------------------------------------
+Copy construction:
+-----------------------------------------------------
+copy z1 to z3
+[inspect_zebra]
+  z1
+  address of z (the Zebra object)   : 0x7ffd12ac7e60
+  address of _name member           : 0x7ffd12ac7e60
+  address of _age  member           : 0x7ffd12ac7e80
+  _name.data() (string buffer)      : 0x7ffd12ac7e70
+  _name.size()                      : 5
+  _age                              : 5
+  _name value                       : Zippy
+
+  Copied from  Zippy (age 5)
+[inspect_zebra]
+  z3
+  address of z (the Zebra object)   : 0x7ffd12ac7ec0
+  address of _name member           : 0x7ffd12ac7ec0
+  address of _age  member           : 0x7ffd12ac7ee0
+  _name.data() (string buffer)      : 0x7ffd12ac7ed0
+  _name.size()                      : 5
+  _age                              : 5
+  _name value                       : Zippy
+
+
+
+Destroying Zebra: Zippy
+-----------------------------------------------------
+Move construction (temporary object):
+-----------------------------------------------------
+move construction to z4
+Constructing Zebra: Bertha (age 8)
+  Moved from temporary  Bertha (age 8)
+[inspect_zebra]
+  z4
+  address of z (the Zebra object)   : 0x7ffd12ac7ec0
+  address of _name member           : 0x7ffd12ac7ec0
+  address of _age  member           : 0x7ffd12ac7ee0
+  _name.data() (string buffer)      : 0x7ffd12ac7ed0
+  _name.size()                      : 6
+  _age                              : 8
+  _name value                       : Bertha
+
+
+
+Destroying Zebra: Bertha
+-----------------------------------------------------
+Copy assignment (=):
+-----------------------------------------------------
+copy z2 to z4
+  After copy assignment from  Arthur (age 7)
+[inspect_zebra]
+  z2
+  address of z (the Zebra object)   : 0x7ffd12ac7e90
+  address of _name member           : 0x7ffd12ac7e90
+  address of _age  member           : 0x7ffd12ac7eb0
+  _name.data() (string buffer)      : 0x7ffd12ac7ea0
+  _name.size()                      : 6
+  _age                              : 7
+  _name value                       : Arthur
+
+[inspect_zebra]
+  z4
+  address of z (the Zebra object)   : 0x7ffd12ac7ec0
+  address of _name member           : 0x7ffd12ac7ec0
+  address of _age  member           : 0x7ffd12ac7ee0
+  _name.data() (string buffer)      : 0x7ffd12ac7ed0
+  _name.size()                      : 6
+  _age                              : 7
+  _name value                       : Arthur
+
+
+
+Destroying Zebra: Arthur
+-----------------------------------------------------
+Move assignment (std::move):
+-----------------------------------------------------
+move z1 to z4
+[inspect_zebra]
+  z1
+  address of z (the Zebra object)   : 0x7ffd12ac7e60
+  address of _name member           : 0x7ffd12ac7e60
+  address of _age  member           : 0x7ffd12ac7e80
+  _name.data() (string buffer)      : 0x7ffd12ac7e70
+  _name.size()                      : 5
+  _age                              : 5
+  _name value                       : Zippy
+
+  After move assignment from  Zippy (age 5)
+[inspect_zebra]
+  z1
+  address of z (the Zebra object)   : 0x7ffd12ac7e60
+  address of _name member           : 0x7ffd12ac7e60
+  address of _age  member           : 0x7ffd12ac7e80
+  _name.data() (string buffer)      : 0x7ffd12ac7e70
+  _name.size()                      : 0
+  _age                              : 5
+  _name value                       : 
+
+[inspect_zebra]
+  z4
+  address of z (the Zebra object)   : 0x7ffd12ac7ec0
+  address of _name member           : 0x7ffd12ac7ec0
+  address of _age  member           : 0x7ffd12ac7ee0
+  _name.data() (string buffer)      : 0x7ffd12ac7ed0
+  _name.size()                      : 5
+  _age                              : 5
+  _name value                       : Zippy
+
+
+
+Destroying Zebra: Zippy
+-----------------------------------------------------
+Vector demonstration (copies/moves inside container):
+-----------------------------------------------------
+Constructing Zebra: Daisy (age 4)
+Constructing Zebra: Charlie (age 3)
+Destroying Zebra: 
+Constructing Zebra: Ernie (age 6)
+Destroying Zebra: 
+Constructing Zebra: Fiona (age 9)
+
+Zebras in pen:
+  Stored  Daisy (age 4)
+  Stored  Charlie (age 3)
+  Stored  Ernie (age 6)
+  Stored  Fiona (age 9)
+
+Zebras in pen:
+[inspect_zebra]
+  z1
+  address of z (the Zebra object)   : 0x55839f9fc310
+  address of _name member           : 0x55839f9fc310
+  address of _age  member           : 0x55839f9fc330
+  _name.data() (string buffer)      : 0x55839f9fc320
+  _name.size()                      : 5
+  _age                              : 4
+  _name value                       : Daisy
+
+[inspect_zebra]
+  z2
+  address of z (the Zebra object)   : 0x55839f9fc338
+  address of _name member           : 0x55839f9fc338
+  address of _age  member           : 0x55839f9fc358
+  _name.data() (string buffer)      : 0x55839f9fc348
+  _name.size()                      : 7
+  _age                              : 3
+  _name value                       : Charlie
+
+[inspect_zebra]
+  z3
+  address of z (the Zebra object)   : 0x55839f9fc360
+  address of _name member           : 0x55839f9fc360
+  address of _age  member           : 0x55839f9fc380
+  _name.data() (string buffer)      : 0x55839f9fc370
+  _name.size()                      : 5
+  _age                              : 6
+  _name value                       : Ernie
+
+[inspect_zebra]
+  z4
+  address of z (the Zebra object)   : 0x55839f9fc388
+  address of _name member           : 0x55839f9fc388
+  address of _age  member           : 0x55839f9fc3a8
+  _name.data() (string buffer)      : 0x55839f9fc398
+  _name.size()                      : 5
+  _age                              : 9
+  _name value                       : Fiona
+
+Destroying Zebra: Daisy
+Destroying Zebra: Charlie
+Destroying Zebra: Ernie
+Destroying Zebra: Fiona
+
+=== End of program ===
+Destroying Zebra: Arthur
+Destroying Zebra: 

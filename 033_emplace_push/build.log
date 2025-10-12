@@ -1,0 +1,54 @@
+Hello
+World
+Make 2 before adding.
+  Constructing  Zebra:   Zippy, age: 5
+  Constructing  Zebra:   Arthur, age: 7
+Add Zippy
+  Copying  Zebra:   Zippy, age: 5
+Add Arthur
+  Copying  Zebra:   Arthur, age: 7
+  Moving  Zebra:   Zippy, age: 5
+Add Bertha
+  Constructing  Zebra:   Bertha, age: 8
+  Moving  Zebra:   Bertha, age: 8
+  Moving  Zebra:   Zippy, age: 5
+  Moving  Zebra:   Arthur, age: 7
+Add Charlie
+  Constructing  Zebra:   Charlie, age: 3
+  Moving  Zebra:   Charlie, age: 3
+Add Darcy
+  Constructing  Zebra:   Darcy, age: 8
+  Moving  Zebra:   Darcy, age: 8
+  Moving  Zebra:   Zippy, age: 5
+  Moving  Zebra:   Arthur, age: 7
+  Moving  Zebra:   Bertha, age: 8
+  Moving  Zebra:   Charlie, age: 3
+Add Ernie
+  Constructing  Zebra:   Ernie, age: 9
+  Moving  Zebra:   Ernie, age: 9
+Add Forrest
+  Constructing  Zebra:   Forrest, age: 11
+  Moving  Zebra:   Forrest, age: 11
+
+Make 2 before adding.
+  Constructing  Zebra:   Zippy, age: 5
+  Constructing  Zebra:   Arthur, age: 7
+Add Zippy
+  Copying  Zebra:   Zippy, age: 5
+Add Arthur
+  Copying  Zebra:   Arthur, age: 7
+Add Bertha
+  Constructing  Zebra:   Bertha, age: 8
+  Moving  Zebra:   Bertha, age: 8
+Add Charlie
+  Constructing  Zebra:   Charlie, age: 3
+  Moving  Zebra:   Charlie, age: 3
+Add Darcy
+  Constructing  Zebra:   Darcy, age: 8
+  Moving  Zebra:   Darcy, age: 8
+Add Ernie
+  Constructing  Zebra:   Ernie, age: 9
+  Moving  Zebra:   Ernie, age: 9
+Add Forrest
+  Constructing  Zebra:   Forrest, age: 11
+  Moving  Zebra:   Forrest, age: 11

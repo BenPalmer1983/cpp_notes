@@ -1,58 +1,50 @@
-Create a vector of doubles.
-Size of vector_of_doubles: 0
-Size of vector_of_doubles (after reserving): 0
-Size of vector_of_doubles (2 items added): 2
-Size of vector_of_doubles (all items added): 5
-Location of vector:      0x7fff074d42e0
-Item 0:                  1.2   location :  0x5eb46b5e82c0
-Item 1:                  2.3   location :  0x5eb46b5e82c8
-Item 2:                  3.4   location :  0x5eb46b5e82d0
-Item 3:                  4.5   location :  0x5eb46b5e82d8
-Item 4:                  5.6   location :  0x5eb46b5e82e0
+Create an empty vector of doubles.
+Size: 0
+Empty? true
 
-Create a vector of ints, populated with values on initialization.
-Size of vector_with_values : 8
-Location of vector:      0x7fff074d4300
-Item 0:                  8   location :  0x5eb46b5e82f0
-Item 1:                  7   location :  0x5eb46b5e82f4
-Item 2:                  6   location :  0x5eb46b5e82f8
-Item 3:                  5   location :  0x5eb46b5e82fc
-Item 4:                  4   location :  0x5eb46b5e8300
-Item 5:                  3   location :  0x5eb46b5e8304
-Item 6:                  2   location :  0x5eb46b5e8308
-Item 7:                  1   location :  0x5eb46b5e830c
-New size of vector_with_values : 12
+Add 5 elements using an initializer list.
+Size after adding: 5
+First element: 1.1
+Second element (via .at): 2.2
+Last element: 5.5
 
-Create a vector of doubles, initialized with 0.0.
-Size of vector_zero :    100
-Item 34:                 0   location :  0x5eb46b5e8470
-Item 71:                 0   location :  0x5eb46b5e83e8
+Accessing elements:
+v[0]: 1.1
+v.at(1): 2.2  (bounds-checked)
 
-Create a vector of doubles, initialized with 12.3.
-Size of vector_12p3 :    100
-Item 34:                 12.3   location :  0x5eb46b5e87a0
-Item 71:                 12.3   location :  0x5eb46b5e8718
+Modify v[2] to 99.9.
+Check modified positions (no loop):
+v[0] = 1.1
+v[1] = 2.2
+v[2] = 99.9
 
-Create a 2D int matrix initialised to 0.
-Size of matrix:              16 20
-Location of matrix:          0x7fff074d4360
-Item [2][3]:                 0   location :  0x5eb46b5e8c7c
+Remove last element with pop_back().
+Size after pop_back(): 4
+New last element: 4.4
 
-Create a 2D int matrix initialised to 99.
-Size of matrix_99:              16 20
-Location of matrix_99:          0x7fff074d4380
-Item [2][3]:                    99   location :  0x5eb46b5e940c
+Insert 123.456 at position 2.
+After insert (selected indices):
+v[1] = 2.2
+v[2] = 123.456  (inserted)
+v[3] = 99.9
 
-Difference between push_back and emplace_back (std::string examples).
-Size of words (start):   0
-Added with push_back(existing obj): alpha
-Added with push_back(temporary):   beta
-Added with emplace_back("gamma"): gamma
-Added with emplace_back(3,'!'):    !!!
-Size of words (end):     4
-Location of words vector: 0x7fff074d43a0
-Item 0:              alpha   location :  0x5eb46b5e9940
-Item 1:              beta   location :  0x5eb46b5e9960
-Item 2:              gamma   location :  0x5eb46b5e9980
-Item 3:              !!!   location :  0x5eb46b5e99a0
+Erase element at position 1.
+After erase (selected indices):
+Size: 4
+v[0] = 1.1
+v[1] = 123.456
 
+Clear all elements with clear().
+Size after clear(): 0
+Empty? true
+
+Create a new vector with initial values.
+numbers size: 5
+First: 10, Last: 50
+
+After insert at index 2: numbers[2] = 99
+Size: 6
+After erase at index 4: Size: 5
+numbers[0] = 10, numbers.back() = 50
+
+End of vector demonstration.
