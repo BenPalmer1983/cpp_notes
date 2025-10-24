@@ -79,17 +79,17 @@ int main()
     //
 
     {
-        enum class Color
+        enum class colour
         {
             Red,
             Green,
             Blue
         };
 
-        Color paint = Color::Green;
+        colour paint = colour::Green;
 
-        // You can compare with another Color, but not with integers:
-        if (paint == Color::Green)
+        // You can compare with another colour, but not with integers:
+        if (paint == colour::Green)
         {
             std::cout << "The paint is green!" << std::endl;
         }
@@ -98,7 +98,7 @@ int main()
         // if (paint == 1) { }  // not allowed
 
         // To print its numeric value, you must cast it (static casts will be discussed shortly)
-        std::cout << "Numeric value of Color::Green: "
+        std::cout << "Numeric value of colour::Green: "
                 << static_cast<int>(paint) << std::endl;
 
         std::cout << std::endl;

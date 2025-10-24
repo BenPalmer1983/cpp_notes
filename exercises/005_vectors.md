@@ -24,7 +24,7 @@ They emphasize safe access, inserting/erasing elements, and basic inspection. Lo
 
 ## Exercises
 
-1. **Create and inspect (no loops)**  
+1. **Create and inspect**  
    Create an empty `std::vector<double> v;`.  
    Print `v.size()` and `v.empty()` (use `std::boolalpha` so it prints `true/false`).
 
@@ -38,7 +38,7 @@ They emphasize safe access, inserting/erasing elements, and basic inspection. Lo
    Use `v.at(1)` to read the second element.  
    Then (commented out) add a line that would throw: `v.at(99);` and label it as “will throw”.
 
-4. **Modify by index (no loop)**  
+4. **Modify by index**  
    Set `v[2] = 99.9;` then print `v[0]`, `v[1]`, `v[2]`, and `v.back()` to verify the change.
 
 5. **Remove last element**  
@@ -71,7 +71,7 @@ They emphasize safe access, inserting/erasing elements, and basic inspection. Lo
 
 ---
 
-## Extension (optional, only if loops have been taught)
+## Extension
 
 - Write a version of `inspect_vector` that uses a `for` loop to print **all** elements with their addresses.  
 - Write a small manual search (with a loop) that returns whether a value exists in a vector, without using `<algorithm>`.

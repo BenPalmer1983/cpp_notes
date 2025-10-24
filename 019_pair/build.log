@@ -1,0 +1,40 @@
+Create and access std::pair
+Name: Alice
+Age: 30
+
+Modify pair values
+Name: Bob
+Age: 25
+
+Create vector of pairs
+Loop through each pair (const auto&)
+Alice - 30
+Bob - 25
+Charlie - 40
+
+Modify vector of pairs (auto&)
+After modification:
+Alice - 35
+Bob - 30
+Charlie - 45
+
+Use iterator with vector of pairs
+Iterator at: 0x7ffcc32221d8   Pair address: 0x5ee0ec7bd2c0   Values: Alice - 35
+Iterator at: 0x7ffcc32221d8   Pair address: 0x5ee0ec7bd2e8   Values: Bob - 30
+Iterator at: 0x7ffcc32221d8   Pair address: 0x5ee0ec7bd310   Values: Charlie - 45
+
+Inspect with helper functions
+[inspect_pair]
+  Pair address: 0x7ffcc3222240
+  first (Bob) address: 0x7ffcc3222240
+  second(25) address: 0x7ffcc3222260
+
+[inspect_pair_vector]
+  address of vector object : 0x7ffcc3222220
+  v.size()                 : 3
+  v.data() (buffer start)  : 0x5ee0ec7bd2c0
+    v[0] at 0x5ee0ec7bd2c0   first: Alice   second: 35
+    v[1] at 0x5ee0ec7bd2e8   first: Bob   second: 30
+    v[2] at 0x5ee0ec7bd310   first: Charlie   second: 45
+
+

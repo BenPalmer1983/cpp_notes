@@ -30,6 +30,11 @@ constexpr int fib(int n)
 
 int main(int argc, char* argv[])
 {
+
+    std::cout << "const variables - promise not to change this value, enforced by the compiler" << std::endl;
+    std::cout << "constexpr variables - evaluated at compile time, read only memory, unlikely to be corrupted, better performance" << std::endl;
+    std::cout << "(see A Tour of C++, Bjarne Stroustrup.)" << std::endl;
+
     // Verbose flag
     bool verbose = false;
     for (int i = 1; i < argc; ++i)

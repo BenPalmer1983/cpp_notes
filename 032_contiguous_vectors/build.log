@@ -1,0 +1,82 @@
+arr_a
+000     0x5c5dc50bc460
+001     0x5c5dc50bc464
+002     0x5c5dc50bc468
+003     0x5c5dc50bc46c
+004     0x5c5dc50bc470
+005     0x5c5dc50bc474
+006     0x5c5dc50bc478
+007     0x5c5dc50bc47c
+008     0x5c5dc50bc480
+009     0x5c5dc50bc484
+010     0x5c5dc50bc488
+011     0x5c5dc50bc48c
+012     0x5c5dc50bc490
+013     0x5c5dc50bc494
+014     0x5c5dc50bc498
+015     0x5c5dc50bc49c
+
+arr_b
+000     0x5c5dc50bc4b0
+001     0x5c5dc50bc4b4
+002     0x5c5dc50bc4b8
+003     0x5c5dc50bc4bc
+004     0x5c5dc50bc4c0
+005     0x5c5dc50bc4c4
+006     0x5c5dc50bc4c8
+007     0x5c5dc50bc4cc
+008     0x5c5dc50bc4d0
+009     0x5c5dc50bc4d4
+010     0x5c5dc50bc4d8
+011     0x5c5dc50bc4dc
+012     0x5c5dc50bc4e0
+013     0x5c5dc50bc4e4
+
+arr_c
+000     0x5c5dc50bc5e0
+001     0x5c5dc50bc5e4
+002     0x5c5dc50bc5e8
+003     0x5c5dc50bc5ec
+004     0x5c5dc50bc5f0
+005     0x5c5dc50bc5f4
+006     0x5c5dc50bc5f8
+007     0x5c5dc50bc5fc
+008     0x5c5dc50bc600
+009     0x5c5dc50bc604
+010     0x5c5dc50bc608
+011     0x5c5dc50bc60c
+012     0x5c5dc50bc610
+013     0x5c5dc50bc614
+014     0x5c5dc50bc618
+015     0x5c5dc50bc61c
+016     0x5c5dc50bc620
+
+arr_d
+000     0x5c5dc50bc550
+001     0x5c5dc50bc554
+002     0x5c5dc50bc558
+003     0x5c5dc50bc55c
+004     0x5c5dc50bc560
+005     0x5c5dc50bc564
+006     0x5c5dc50bc568
+007     0x5c5dc50bc56c
+008     0x5c5dc50bc570
+009     0x5c5dc50bc574
+010     0x5c5dc50bc578
+011     0x5c5dc50bc57c
+012     0x5c5dc50bc580
+013     0x5c5dc50bc584
+014     0x5c5dc50bc588
+015     0x5c5dc50bc58c
+016     0x5c5dc50bc590
+017     0x5c5dc50bc594
+018     0x5c5dc50bc598
+019     0x5c5dc50bc59c
+020     0x5c5dc50bc5a0
+021     0x5c5dc50bc5a4
+022     0x5c5dc50bc5a8
+
+The memory for each vector is contiguous.  
+If it cannot fit another element where it is, the entire vector must be copied/moved.
+Where there is no more space a std::bad_alloc exception will be thrown.
+Reserving memory ahead of time helps minimise reallocation of memory.

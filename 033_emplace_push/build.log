@@ -1,54 +1,121 @@
 Hello
 World
-Make 2 before adding.
-  Constructing  Zebra:   Zippy, age: 5
-  Constructing  Zebra:   Arthur, age: 7
-Add Zippy
-  Copying  Zebra:   Zippy, age: 5
-Add Arthur
-  Copying  Zebra:   Arthur, age: 7
-  Moving  Zebra:   Zippy, age: 5
-Add Bertha
-  Constructing  Zebra:   Bertha, age: 8
-  Moving  Zebra:   Bertha, age: 8
-  Moving  Zebra:   Zippy, age: 5
-  Moving  Zebra:   Arthur, age: 7
-Add Charlie
-  Constructing  Zebra:   Charlie, age: 3
-  Moving  Zebra:   Charlie, age: 3
-Add Darcy
-  Constructing  Zebra:   Darcy, age: 8
-  Moving  Zebra:   Darcy, age: 8
-  Moving  Zebra:   Zippy, age: 5
-  Moving  Zebra:   Arthur, age: 7
-  Moving  Zebra:   Bertha, age: 8
-  Moving  Zebra:   Charlie, age: 3
-Add Ernie
-  Constructing  Zebra:   Ernie, age: 9
-  Moving  Zebra:   Ernie, age: 9
-Add Forrest
-  Constructing  Zebra:   Forrest, age: 11
-  Moving  Zebra:   Forrest, age: 11
 
+
+EXAMPLE 1.  Add without reserving space for the vector.
+##################################################################
 Make 2 before adding.
-  Constructing  Zebra:   Zippy, age: 5
-  Constructing  Zebra:   Arthur, age: 7
+##Default Constructor## (Zippy at 0x7ffcd952cf80)
+##Default Constructor## (Arthur at 0x7ffcd952cfd0)
+> Notice constructor called for each
+
 Add Zippy
-  Copying  Zebra:   Zippy, age: 5
+##Copy Constructor## (Zippy at 0x56cbb52c6340)
+> Notice constructor called again for Zippy.
+> zebra_1 (Zippy) is copied into the vector.
+
+
 Add Arthur
-  Copying  Zebra:   Arthur, age: 7
+##Copy Constructor## (Arthur at 0x56cbb52c63d8)
+##Move Constructor## (Zippy at 0x56cbb52c6390)
+##Destructor## Zebra ( at 0x56cbb52c6340)
+> Notice Zippy is moved, Arthur is copied, 
+> the original Zippy.
+
 Add Bertha
-  Constructing  Zebra:   Bertha, age: 8
-  Moving  Zebra:   Bertha, age: 8
+##Default Constructor## (Bertha at 0x7ffcd952d020)
+##Move Constructor## (Bertha at 0x56cbb52c64c0)
+##Move Constructor## (Zippy at 0x56cbb52c6430)
+##Destructor## Zebra ( at 0x56cbb52c6390)
+##Move Constructor## (Arthur at 0x56cbb52c6478)
+##Destructor## Zebra ( at 0x56cbb52c63d8)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+> Bertha is created and moved. 
+> The existing Zebras are also moved and cleaned up.
+
 Add Charlie
-  Constructing  Zebra:   Charlie, age: 3
-  Moving  Zebra:   Charlie, age: 3
+##Default Constructor## (Charlie at 0x7ffcd952d020)
+##Move Constructor## (Charlie at 0x56cbb52c6508)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+
 Add Darcy
-  Constructing  Zebra:   Darcy, age: 8
-  Moving  Zebra:   Darcy, age: 8
+##Default Constructor## (Darcy at 0x7ffcd952d020)
+##Move Constructor## (Darcy at 0x56cbb52c6680)
+##Move Constructor## (Zippy at 0x56cbb52c6560)
+##Destructor## Zebra ( at 0x56cbb52c6430)
+##Move Constructor## (Arthur at 0x56cbb52c65a8)
+##Destructor## Zebra ( at 0x56cbb52c6478)
+##Move Constructor## (Bertha at 0x56cbb52c65f0)
+##Destructor## Zebra ( at 0x56cbb52c64c0)
+##Move Constructor## (Charlie at 0x56cbb52c6638)
+##Destructor## Zebra ( at 0x56cbb52c6508)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+
 Add Ernie
-  Constructing  Zebra:   Ernie, age: 9
-  Moving  Zebra:   Ernie, age: 9
+##Default Constructor## (Ernie at 0x7ffcd952d020)
+##Move Constructor## (Ernie at 0x56cbb52c66c8)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+
 Add Forrest
-  Constructing  Zebra:   Forrest, age: 11
-  Moving  Zebra:   Forrest, age: 11
+##Default Constructor## (Forrest at 0x7ffcd952d020)
+##Move Constructor## (Forrest at 0x56cbb52c6710)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+
+##Destructor## Zebra (Arthur at 0x7ffcd952cfd0)
+##Destructor## Zebra (Zippy at 0x7ffcd952cf80)
+##Destructor## Zebra (Zippy at 0x56cbb52c6560)
+##Destructor## Zebra (Arthur at 0x56cbb52c65a8)
+##Destructor## Zebra (Bertha at 0x56cbb52c65f0)
+##Destructor## Zebra (Charlie at 0x56cbb52c6638)
+##Destructor## Zebra (Darcy at 0x56cbb52c6680)
+##Destructor## Zebra (Ernie at 0x56cbb52c66c8)
+##Destructor## Zebra (Forrest at 0x56cbb52c6710)
+> Notice: cleans up at end of scope block
+
+
+EXAMPLE 2.  Add with reserving space for the vector.
+##################################################################
+Reserve 7.
+Make 2 before adding.
+##Default Constructor## (Zippy at 0x7ffcd952cf80)
+##Default Constructor## (Arthur at 0x7ffcd952cfd0)
+Add Zippy
+##Copy Constructor## (Zippy at 0x56cbb52c67b0)
+Add Arthur
+##Copy Constructor## (Arthur at 0x56cbb52c67f8)
+Add Bertha
+##Default Constructor## (Bertha at 0x7ffcd952d020)
+##Move Constructor## (Bertha at 0x56cbb52c6840)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+Add Charlie
+##Default Constructor## (Charlie at 0x7ffcd952d020)
+##Move Constructor## (Charlie at 0x56cbb52c6888)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+Add Darcy
+##Default Constructor## (Darcy at 0x7ffcd952d020)
+##Move Constructor## (Darcy at 0x56cbb52c68d0)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+Add Ernie
+##Default Constructor## (Ernie at 0x7ffcd952d020)
+##Move Constructor## (Ernie at 0x56cbb52c6918)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+Add Forrest
+##Default Constructor## (Forrest at 0x7ffcd952d020)
+##Move Constructor## (Forrest at 0x56cbb52c6960)
+##Destructor## Zebra ( at 0x7ffcd952d020)
+> Notice a lot fewer moves and destructors as the vector
+> isn't being moved to keep contiguous.
+> Still some moving, depending on how each is added to the vector.
+
+##Destructor## Zebra (Arthur at 0x7ffcd952cfd0)
+##Destructor## Zebra (Zippy at 0x7ffcd952cf80)
+##Destructor## Zebra (Zippy at 0x56cbb52c67b0)
+##Destructor## Zebra (Arthur at 0x56cbb52c67f8)
+##Destructor## Zebra (Bertha at 0x56cbb52c6840)
+##Destructor## Zebra (Charlie at 0x56cbb52c6888)
+##Destructor## Zebra (Darcy at 0x56cbb52c68d0)
+##Destructor## Zebra (Ernie at 0x56cbb52c6918)
+##Destructor## Zebra (Forrest at 0x56cbb52c6960)
+> Notice: cleans up at end of scope block
+
+

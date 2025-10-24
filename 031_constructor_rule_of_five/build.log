@@ -1,0 +1,388 @@
+=== Rule of Five Demonstration ===
+
+-----------------------------------------------------
+1) Construct z1 and z2
+-----------------------------------------------------
+Creating 2 Zebras (Zippy, Arthur).  This will call the Default Constructor for each.
+
+##Default Constructor## (Zippy at 0x7fff406f3710)
+##Default Constructor## (Arthur at 0x7fff406f3760)
+[inspect_zebra]
+  Zebra variable: z1
+  address of z (the Zebra object)     : 0x7fff406f3710
+  address of _name member             : 0x7fff406f3710
+  address of _age  member             : 0x7fff406f3730
+  address of _description member      : 0x7fff406f3738
+  _age                                : 5
+  _name value                         : Zippy
+  _name.size()                        : 5
+  _description value                  : This is a longer description for the Zebra (Zippy).
+  _description.size()                 : 51
+  _name.data() (string buffer)        : 0x7fff406f3720
+  _description.data() (string buffer) : 0x5af7c48b6300
+
+[inspect_zebra]
+  Zebra variable: z2
+  address of z (the Zebra object)     : 0x7fff406f3760
+  address of _name member             : 0x7fff406f3760
+  address of _age  member             : 0x7fff406f3780
+  address of _description member      : 0x7fff406f3788
+  _age                                : 7
+  _name value                         : Arthur
+  _name.size()                        : 6
+  _description value                  : This is a longer description for the Zebra (Arthur).
+  _description.size()                 : 52
+  _name.data() (string buffer)        : 0x7fff406f3770
+  _description.data() (string buffer) : 0x5af7c48b6340
+
+
+Two distinct Zebras have been created in memory.
+These have been created in the scope of main() so will be accessible throughout.
+
+
+-----------------------------------------------------
+2) copy construction:
+-----------------------------------------------------
+copy Zippy z1 to z3
+[inspect_zebra]
+  Zebra variable: z1
+  address of z (the Zebra object)     : 0x7fff406f3710
+  address of _name member             : 0x7fff406f3710
+  address of _age  member             : 0x7fff406f3730
+  address of _description member      : 0x7fff406f3738
+  _age                                : 5
+  _name value                         : Zippy
+  _name.size()                        : 5
+  _description value                  : This is a longer description for the Zebra (Zippy).
+  _description.size()                 : 51
+  _name.data() (string buffer)        : 0x7fff406f3720
+  _description.data() (string buffer) : 0x5af7c48b6300
+
+copying...with Zebra z3 {z1};
+##Copy Constructor## (Zippy at 0x7fff406f3800)
+  Copied from  Zippy (age 5)
+[inspect_zebra]
+  Zebra variable: z3
+  address of z (the Zebra object)     : 0x7fff406f3800
+  address of _name member             : 0x7fff406f3800
+  address of _age  member             : 0x7fff406f3820
+  address of _description member      : 0x7fff406f3828
+  _age                                : 5
+  _name value                         : Zippy
+  _name.size()                        : 5
+  _description value                  : This is a longer description for the Zebra (Zippy).
+  _description.size()                 : 51
+  _name.data() (string buffer)        : 0x7fff406f3810
+  _description.data() (string buffer) : 0x5af7c48b62c0
+
+##Destructor## Zebra (Zippy at 0x7fff406f3800)
+-----------------------------------------------------
+2) copy construction:
+-----------------------------------------------------
+copy Zippy z1 to z3
+[inspect_zebra]
+  Zebra variable: z1
+  address of z (the Zebra object)     : 0x7fff406f3710
+  address of _name member             : 0x7fff406f3710
+  address of _age  member             : 0x7fff406f3730
+  address of _description member      : 0x7fff406f3738
+  _age                                : 5
+  _name value                         : Zippy
+  _name.size()                        : 5
+  _description value                  : This is a longer description for the Zebra (Zippy).
+  _description.size()                 : 51
+  _name.data() (string buffer)        : 0x7fff406f3720
+  _description.data() (string buffer) : 0x5af7c48b6300
+
+copying...Zebra z3 = z1;
+##Copy Constructor## (Zippy at 0x7fff406f3800)
+  Copied from  Zippy (age 5)
+[inspect_zebra]
+  Zebra variable: z3
+  address of z (the Zebra object)     : 0x7fff406f3800
+  address of _name member             : 0x7fff406f3800
+  address of _age  member             : 0x7fff406f3820
+  address of _description member      : 0x7fff406f3828
+  _age                                : 5
+  _name value                         : Zippy
+  _name.size()                        : 5
+  _description value                  : This is a longer description for the Zebra (Zippy).
+  _description.size()                 : 51
+  _name.data() (string buffer)        : 0x7fff406f3810
+  _description.data() (string buffer) : 0x5af7c48b62c0
+
+##Destructor## Zebra (Zippy at 0x7fff406f3800)
+
+Copied the contents of z1 to z3.  Notice z3 destroyed when it went out of scope.
+
+
+-----------------------------------------------------
+3) move construction:
+-----------------------------------------------------
+create a temporary Zebra and move to z4
+##Default Constructor## (Forrest at 0x7fff406f37b0)
+  Move construction  Forrest (age 8)
+[inspect_zebra]
+  Zebra variable: z5
+  address of z (the Zebra object)     : 0x7fff406f37b0
+  address of _name member             : 0x7fff406f37b0
+  address of _age  member             : 0x7fff406f37d0
+  address of _description member      : 0x7fff406f37d8
+  _age                                : 8
+  _name value                         : Forrest
+  _name.size()                        : 7
+  _description value                  : This is a much longer string to describe Forrest, the Zebra, to ensure it's stored on the heap and not the stack.
+  _description.size()                 : 113
+  _name.data() (string buffer)        : 0x7fff406f37c0
+  _description.data() (string buffer) : 0x5af7c48b6400
+
+##Move Constructor## (Forrest at 0x7fff406f3800)
+  Move construction  Forrest (age 8)
+[inspect_zebra]
+  Zebra variable: z4
+  address of z (the Zebra object)     : 0x7fff406f3800
+  address of _name member             : 0x7fff406f3800
+  address of _age  member             : 0x7fff406f3820
+  address of _description member      : 0x7fff406f3828
+  _age                                : 8
+  _name value                         : Forrest
+  _name.size()                        : 7
+  _description value                  : This is a much longer string to describe Forrest, the Zebra, to ensure it's stored on the heap and not the stack.
+  _description.size()                 : 113
+  _name.data() (string buffer)        : 0x7fff406f3810
+  _description.data() (string buffer) : 0x5af7c48b6400
+
+[inspect_zebra]
+  Zebra variable: z5
+  address of z (the Zebra object)     : 0x7fff406f37b0
+  address of _name member             : 0x7fff406f37b0
+  address of _age  member             : 0x7fff406f37d0
+  address of _description member      : 0x7fff406f37d8
+  _age                                : 0
+  _name value                         : 
+  _name.size()                        : 0
+  _description value                  : 
+  _description.size()                 : 0
+  _name.data() (string buffer)        : 0x7fff406f37c0
+  _description.data() (string buffer) : 0x7fff406f37e8
+
+##Destructor## Zebra (Forrest at 0x7fff406f3800)
+##Destructor## Zebra ( at 0x7fff406f37b0)
+
+Move constructed Zebra to Z4.
+Name is on the stack due to it's small size.
+Description is on the heap as it's larger.
+Notice the description.data() address is the same for z5 and z4.
+The compiler only moves what is large enough to be worth moving.
+The second print of z5 has been cleared.
+Notice z4 and z5 destroyed when out of scope.
+
+
+-----------------------------------------------------
+4) copy assignment (=):
+-----------------------------------------------------
+copy z2 to z4
+##Default Constructor## (Bertha at 0x7fff406f3800)
+[inspect_zebra]
+  Zebra variable: z4
+  address of z (the Zebra object)     : 0x7fff406f3800
+  address of _name member             : 0x7fff406f3800
+  address of _age  member             : 0x7fff406f3820
+  address of _description member      : 0x7fff406f3828
+  _age                                : 8
+  _name value                         : Bertha
+  _name.size()                        : 6
+  _description value                  : 
+  _description.size()                 : 0
+  _name.data() (string buffer)        : 0x7fff406f3810
+  _description.data() (string buffer) : 0x7fff406f3838
+
+##Copy Assignment## (Arthur at 0x7fff406f3800)
+  After copy assignment from  Arthur (age 7)
+[inspect_zebra]
+  Zebra variable: z2
+  address of z (the Zebra object)     : 0x7fff406f3760
+  address of _name member             : 0x7fff406f3760
+  address of _age  member             : 0x7fff406f3780
+  address of _description member      : 0x7fff406f3788
+  _age                                : 7
+  _name value                         : Arthur
+  _name.size()                        : 6
+  _description value                  : This is a longer description for the Zebra (Arthur).
+  _description.size()                 : 52
+  _name.data() (string buffer)        : 0x7fff406f3770
+  _description.data() (string buffer) : 0x5af7c48b6340
+
+[inspect_zebra]
+  Zebra variable: z4
+  address of z (the Zebra object)     : 0x7fff406f3800
+  address of _name member             : 0x7fff406f3800
+  address of _age  member             : 0x7fff406f3820
+  address of _description member      : 0x7fff406f3828
+  _age                                : 7
+  _name value                         : Arthur
+  _name.size()                        : 6
+  _description value                  : This is a longer description for the Zebra (Arthur).
+  _description.size()                 : 52
+  _name.data() (string buffer)        : 0x7fff406f3810
+  _description.data() (string buffer) : 0x5af7c48b62c0
+
+##Destructor## Zebra (Arthur at 0x7fff406f3800)
+
+Notice that the original z4 is overwritten with a copy of z2.
+Notice that z4 is destroyed when it goes out of scope.
+
+
+-----------------------------------------------------
+5) Move assignment (std::move):
+-----------------------------------------------------
+move z1 to z4
+[inspect_zebra]
+  Zebra variable: z1
+  address of z (the Zebra object)     : 0x7fff406f3710
+  address of _name member             : 0x7fff406f3710
+  address of _age  member             : 0x7fff406f3730
+  address of _description member      : 0x7fff406f3738
+  _age                                : 5
+  _name value                         : Zippy
+  _name.size()                        : 5
+  _description value                  : This is a longer description for the Zebra (Zippy).
+  _description.size()                 : 51
+  _name.data() (string buffer)        : 0x7fff406f3720
+  _description.data() (string buffer) : 0x5af7c48b6300
+
+##Move Constructor## (Zippy at 0x7fff406f3800)
+  After move assignment from  Zippy (age 5)
+[inspect_zebra]
+  Zebra variable: z4
+  address of z (the Zebra object)     : 0x7fff406f3800
+  address of _name member             : 0x7fff406f3800
+  address of _age  member             : 0x7fff406f3820
+  address of _description member      : 0x7fff406f3828
+  _age                                : 5
+  _name value                         : Zippy
+  _name.size()                        : 5
+  _description value                  : This is a longer description for the Zebra (Zippy).
+  _description.size()                 : 51
+  _name.data() (string buffer)        : 0x7fff406f3810
+  _description.data() (string buffer) : 0x5af7c48b6300
+
+[inspect_zebra]
+  Zebra variable: z1
+  address of z (the Zebra object)     : 0x7fff406f3710
+  address of _name member             : 0x7fff406f3710
+  address of _age  member             : 0x7fff406f3730
+  address of _description member      : 0x7fff406f3738
+  _age                                : 0
+  _name value                         : 
+  _name.size()                        : 0
+  _description value                  : 
+  _description.size()                 : 0
+  _name.data() (string buffer)        : 0x7fff406f3720
+  _description.data() (string buffer) : 0x7fff406f3748
+
+##Destructor## Zebra (Zippy at 0x7fff406f3800)
+
+Notice that the original z4 is created from z1.
+In the process, z1 has been reset with _description moved to z4.
+Memory location for z4 _description is the same as z1 _description.
+Notice that z4 is destroyed when it goes out of scope.
+
+
+-----------------------------------------------------
+Vector demonstration (copies/moves inside container):
+-----------------------------------------------------
+
+Emplace Daisy (construct in place):
+##Default Constructor## (Daisy at 0x5af7c48b64d0)
+
+Emplace Daisy (construct then move):
+##Default Constructor## (Charlie at 0x7fff406f3800)
+##Move Constructor## (Charlie at 0x5af7c48b6518)
+##Destructor## Zebra ( at 0x7fff406f3800)
+Notice default constructor -> move -> destructor for temporary
+
+Push Ernie (construct then move):
+##Default Constructor## (Ernie at 0x7fff406f3800)
+##Move Constructor## (Ernie at 0x5af7c48b6560)
+##Destructor## Zebra ( at 0x7fff406f3800)
+Notice default constructor -> move -> destructor for temporary
+
+Emplace Fiona (construct in place):
+##Default Constructor## (Fiona at 0x5af7c48b65a8)
+
+
+Zebras in pen:
+  Stored  Daisy (age 4)
+  Stored  Charlie (age 3)
+  Stored  Ernie (age 6)
+  Stored  Fiona (age 9)
+
+Zebras in pen:
+[inspect_zebra]
+  Zebra variable: z1
+  address of z (the Zebra object)     : 0x5af7c48b64d0
+  address of _name member             : 0x5af7c48b64d0
+  address of _age  member             : 0x5af7c48b64f0
+  address of _description member      : 0x5af7c48b64f8
+  _age                                : 4
+  _name value                         : Daisy
+  _name.size()                        : 5
+  _description value                  : 
+  _description.size()                 : 0
+  _name.data() (string buffer)        : 0x5af7c48b64e0
+  _description.data() (string buffer) : 0x5af7c48b6508
+
+[inspect_zebra]
+  Zebra variable: z2
+  address of z (the Zebra object)     : 0x5af7c48b6518
+  address of _name member             : 0x5af7c48b6518
+  address of _age  member             : 0x5af7c48b6538
+  address of _description member      : 0x5af7c48b6540
+  _age                                : 3
+  _name value                         : Charlie
+  _name.size()                        : 7
+  _description value                  : 
+  _description.size()                 : 0
+  _name.data() (string buffer)        : 0x5af7c48b6528
+  _description.data() (string buffer) : 0x5af7c48b6550
+
+[inspect_zebra]
+  Zebra variable: z3
+  address of z (the Zebra object)     : 0x5af7c48b6560
+  address of _name member             : 0x5af7c48b6560
+  address of _age  member             : 0x5af7c48b6580
+  address of _description member      : 0x5af7c48b6588
+  _age                                : 6
+  _name value                         : Ernie
+  _name.size()                        : 5
+  _description value                  : 
+  _description.size()                 : 0
+  _name.data() (string buffer)        : 0x5af7c48b6570
+  _description.data() (string buffer) : 0x5af7c48b6598
+
+[inspect_zebra]
+  Zebra variable: z4
+  address of z (the Zebra object)     : 0x5af7c48b65a8
+  address of _name member             : 0x5af7c48b65a8
+  address of _age  member             : 0x5af7c48b65c8
+  address of _description member      : 0x5af7c48b65d0
+  _age                                : 9
+  _name value                         : Fiona
+  _name.size()                        : 5
+  _description value                  : 
+  _description.size()                 : 0
+  _name.data() (string buffer)        : 0x5af7c48b65b8
+  _description.data() (string buffer) : 0x5af7c48b65e0
+
+##Destructor## Zebra (Daisy at 0x5af7c48b64d0)
+##Destructor## Zebra (Charlie at 0x5af7c48b6518)
+##Destructor## Zebra (Ernie at 0x5af7c48b6560)
+##Destructor## Zebra (Fiona at 0x5af7c48b65a8)
+
+Notice that the original z4 is created from z1.
+
+
+=== End of program ===
+##Destructor## Zebra (Arthur at 0x7fff406f3760)
+##Destructor## Zebra ( at 0x7fff406f3710)
