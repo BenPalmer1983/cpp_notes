@@ -81,11 +81,7 @@
 			"format": "cpp",
 			"stdfloat": "cpp",
 			"csignal": "cpp",
-			"any": "cpp",
-			"codecvt": "cpp",
-			"ranges": "cpp",
-			"valarray": "cpp",
-			"regex": "cpp"
+			"any": "cpp"
 		}
 	}
 }

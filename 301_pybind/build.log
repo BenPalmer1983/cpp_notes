@@ -1,0 +1,23 @@
+Virtual environment activated: /DATA/disk3/cloud/Code/cpp/Tutorial/301_pybind/.venv/bin/python3
+Obtaining file:///DATA/disk3/cloud/Code/cpp/Tutorial/301_pybind
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: maths
+  Building editable for maths (pyproject.toml): started
+  Building editable for maths (pyproject.toml): finished with status 'done'
+  Created wheel for maths: filename=maths-0.1.0-0.editable-cp312-cp312-linux_x86_64.whl size=2604 sha256=9b37523d2107bb0270997f58059a944764cd031cfdd830ea760382b7d06602d6
+  Stored in directory: /tmp/pip-ephem-wheel-cache-oaj2fvwt/wheels/0e/4d/8d/c021d2ad51f90fb4e9139841ec1748cf1aff69ff59da8b5057
+Successfully built maths
+Installing collected packages: maths
+  Attempting uninstall: maths
+    Found existing installation: maths 0.1.0
+    Uninstalling maths-0.1.0:
+      Successfully uninstalled maths-0.1.0
+Successfully installed maths-0.1.0
+[ 55. 116.]

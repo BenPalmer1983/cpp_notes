@@ -105,5 +105,19 @@ int main(int, char**)
     }
 
 
+
+    // Setting a const with a ternary
+    //###################################################
+
+    std::cout << "7) Ternary for setting a const" << std::endl;
+
+    bool int_flag {true};
+
+    const int my_integer_1 = int_flag ? 1 : 0;
+    const int my_integer_2 = int_flag ? 9 : 10;
+
+    std::cout << int_flag << "    " << my_integer_1 << std::endl;
+    std::cout << int_flag << "    " << my_integer_2 << std::endl;
+
     return 0;
 }

@@ -1,0 +1,18 @@
+==================== 1) Basic noexcept on functions ====================
+Function definitely_noexcept will not throw exceptions.
+Function might_throw might throw exceptions.
+noexcept(definitely_noexcept()) -> true
+noexcept(might_throw()) -> false
+
+==================== 2) The noexcept(expr) operator ====================
+noexcept(no_throw_func(42)) -> true
+noexcept(may_throw_func(42)) -> false
+Note: noexcept(...) is evaluated at compile time and does not run the code.
+
+==================== 3) If a noexcept function throws ===================
+Calling declared_noexcept_but_throws()...
+[DEMO_TERMINATE disabled] This function would throw and terminate if enabled.
+Returned normally (no terminate because DEMO_TERMINATE is off).
+To see terminate, rebuild with -DDEMO_TERMINATE.
+
+Done.

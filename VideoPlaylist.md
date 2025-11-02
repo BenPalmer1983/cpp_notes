@@ -33,6 +33,9 @@ https://www.youtube.com/watch?v=kKbT0Vg3ISw
 Faster, Safer, Better Ranges, Tristan Brindle, 2025
 https://www.youtube.com/watch?v=IpwtNhyXylI
 
+Alex Stepanov, Generic Programming and the C++ STL, Jon Kalb, 2025
+https://www.youtube.com/watch?v=yUa6Uxq25tQ
+
 
 
 ## Software Development
@@ -51,6 +54,9 @@ https://www.youtube.com/watch?v=Y9clBHENy4Q
 
 The Albatross Project, Mark Rendle, 2024
 https://www.youtube.com/watch?v=WwNCoPntgZ8
+
+How JavaScript Happened: A Short History of Programming Languages, Mark Rendle, 2024
+https://www.youtube.com/watch?v=lWeLaEo4pn0
 
 
 

@@ -19,16 +19,28 @@ Loop through each number   const auto& number
 6
 
 Loop through each number   auto& number and add 10
-0x5f20092bd2c0   11
-0x5f20092bd2d4   16
+0x64a34afee2c0   11
+0x64a34afee2d4   16
 
 Loop through each number   iterator
 Add 10 to each
 Print out
-0x7ffec085c430      0x5f20092bd2c0      21
-0x7ffec085c430      0x5f20092bd2c4      22
-0x7ffec085c430      0x5f20092bd2c8      23
-0x7ffec085c430      0x5f20092bd2cc      24
-0x7ffec085c430      0x5f20092bd2d0      25
-0x7ffec085c430      0x5f20092bd2d4      26
+0x7ffe0ca5e3c8      0x64a34afee2c0      21
+0x7ffe0ca5e3c8      0x64a34afee2c4      22
+0x7ffe0ca5e3c8      0x64a34afee2c8      23
+0x7ffe0ca5e3c8      0x64a34afee2cc      24
+0x7ffe0ca5e3c8      0x64a34afee2d0      25
+0x7ffe0ca5e3c8      0x64a34afee2d4      26
+
+Basic While Loop
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
 

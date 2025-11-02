@@ -87,6 +87,22 @@ int main(int argc, char* argv[])
 
 
 
+    //#####################
+    //  Example 5
+    //#####################
+
+    // A basic while loop - caution, as this can get stuck in an infinite loop
+    std::cout << "Basic While Loop" << std::endl;
+
+    std::size_t i = 0;
+    while(i < 10)
+    {   
+        std::cout << i << std::endl;
+        i++;                               // increment i by 1
+    }
+    std::cout << std::endl;
+
+
 }
 
 

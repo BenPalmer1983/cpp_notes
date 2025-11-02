@@ -1,0 +1,22 @@
+[3-digit] 123 at pos 1010
+[3-digit] 234 at pos 1014
+[3-digit] 345 at pos 1018
+[2-digit 2-alpha] 12ab at pos 1022
+[2-digit 2-alpha] 23aa at pos 1034
+[2-digit 2-alpha] 12aa at pos 1204
+[2-digit 2-alpha] 23gh at pos 1328
+[2-digit 2-alpha] 12ab at pos 1438
+[2-digit 2-alpha] 12ab at pos 1458
+[2-digit 2-alpha] 12ab at pos 1483
+[2-digit 2-alpha] 12ab at pos 1493
+[2-alpha 3-digit 2-alpha] aa123aa at pos 1031
+[2-digit 3-alpha 2-digit] 12abc34 at pos 1022
+[2-digit *-alpha 2-digit] 12abc34 at pos 1022
+[2-digit *-alpha 2-digit] 12abcdefg34 at pos 1438
+[2-digit *-alpha/digit 2-digit] 12abc34 at pos 1022
+[2-digit *-alpha/digit 2-digit] 12abcdefg34 at pos 1438
+[2-digit *-alpha/digit 2-digit] 12ab1cd34 at pos 1483
+[2-digit *-alpha/digit 2-digit] 12ab1a1cd34 at pos 1493
+[2-digit *-alpha/space 2-digit] 12abc34 at pos 1022
+[2-digit *-alpha/space 2-digit] 12abcdefg34 at pos 1438
+[2-digit *-alpha/space 2-digit] 12ab  cd34 at pos 1458
