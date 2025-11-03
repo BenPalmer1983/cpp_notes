@@ -48,6 +48,9 @@ ENV PATH="/opt/llvm-${LLVM_VER}/bin:/usr/local/cuda/bin:${PATH}"
 ENV LD_LIBRARY_PATH="/opt/llvm-${LLVM_VER}/lib:${LD_LIBRARY_PATH}"
 RUN printf '%s\n' '. /opt/intel/oneapi/setvars.sh > /dev/null || true' > /etc/profile.d/oneapi.sh
 
+RUN apt update && apt install -y python3.10-dev
+RUN apt install -y python3.10-venv
+
 # (Optional) quick sanity during build — uncomment if desired
 # RUN bash -lc "nvcc --version && clinfo -l || true && icpx -fsycl --version && clang++ --version"
 

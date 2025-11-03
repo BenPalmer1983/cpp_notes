@@ -1,0 +1,24 @@
+[build-system]
+requires = ["scikit-build-core>=0.9", "pybind11>=2.12", "cmake>=3.22", "ninja"]
+build-backend = "scikit_build_core.build"
+
+# -----------------------------------------------------------------
+# Project metadata – **required** for any wheel
+# -----------------------------------------------------------------
+[project]
+name = "maths"
+version = "0.1.0"
+description = "SYCL‑accelerated DGEMM"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+# -----------------------------------------------------------------
+# scikit‑build settings
+# -----------------------------------------------------------------
+[tool.scikit-build]
+cmake.minimum-version = "3.22"
+ninja.minimum-version = "1.11"
+
+# Put the .so **directly** into the wheel (no sub‑package)
+wheel.install-dir = "."
+wheel.packages = []          # disables the default "maths/" folder
