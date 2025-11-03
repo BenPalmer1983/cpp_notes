@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import time
-import numpy as np
+import numpy
 import maths
 
 # 1. Problem size
@@ -8,10 +8,10 @@ N = 3500          # rows = cols
 K = 3500          # inner dimension
 
 # 2. Random data (double precision)
-rng = np.random.default_rng(seed=42)
-A = rng.random((N, K), dtype=np.float64)
-B = rng.random((K, N), dtype=np.float64)
-C = rng.random((N, N), dtype=np.float64)
+rng = numpy.random.default_rng(seed=42)
+A = rng.random((N, K), dtype=numpy.float64)
+B = rng.random((K, N), dtype=numpy.float64)
+C = rng.random((N, N), dtype=numpy.float64)
 
 k = 2.0
 l = 3.0
@@ -31,7 +31,7 @@ X_np = k * (A @ B) + l * C
 t_np = time.perf_counter() - t0
 
 # 6. Verify correctness
-max_diff = np.max(np.abs(X_sycl - X_np))
+max_diff = numpy.max(numpy.abs(X_sycl - X_np))
 print(f"max abs diff: {max_diff:.2e}")
 
 # 7. Print timings
