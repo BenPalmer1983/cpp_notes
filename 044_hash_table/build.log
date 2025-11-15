@@ -1,0 +1,162 @@
+Bob is 30 years old.
+David not found.
+All entries:
+  Bob: 30
+  Alice: 26
+Size: 2
+Buckets: 13
+Load factor: 0.153846
+
+Inserting Alice:  25
+key:        Alice
+  hash:     7617411810006367401
+  bucket:   9
+  insert into bucket 9
+  insert added new 9
+Inserting Bob:  30
+key:        Bob
+  hash:     1753070528460067080
+  bucket:   8
+  insert into bucket 8
+  insert added new 8
+Inserting Charlie:  35
+key:        Charlie
+  hash:     11231302656547082352
+  bucket:   0
+  insert into bucket 0
+  insert added new 0
+Inserting David:  40
+key:        David
+  hash:     3810397803508879209
+  bucket:   9
+  insert into bucket 9
+  insert added new 9
+Inserting Eve:  22
+key:        Eve
+  hash:     12407568336586641124
+  bucket:   4
+  insert into bucket 4
+  insert added new 4
+Inserting Frank:  45
+key:        Frank
+  hash:     5378685832726547575
+  bucket:   7
+  insert into bucket 7
+  insert added new 7
+Inserting Grace:  28
+key:        Grace
+  hash:     9347918155170158537
+  bucket:   9
+  insert into bucket 9
+  insert added new 9
+Inserting Hannah:  33
+key:        Hannah
+  hash:     18442535918027614965
+  bucket:   5
+  insert into bucket 5
+  insert added new 5
+Inserting Isaac:  29
+key:        Isaac
+  hash:     3055699852188523234
+  bucket:   2
+  insert into bucket 2
+  insert added new 2
+Inserting Julia:  31
+key:        Julia
+  hash:     11409384406575110126
+  bucket:   14
+  insert into bucket 14
+  insert added new 14
+Inserting Kevin:  27
+key:        Kevin
+  hash:     68133196600262897
+  bucket:   1
+  insert into bucket 1
+  insert added new 1
+Inserting Linda:  38
+key:        Linda
+  hash:     7522372178568165958
+  bucket:   6
+  insert into bucket 6
+  insert added new 6
+Inserting Michael:  42
+  need to resize
+Rehashing
+Old capacity:     16
+New capacity:     32
+key:        Michael
+  hash:     8313484109273571154
+  bucket:   18
+  insert into bucket 18
+  insert added new 18
+Inserting Nina:  26
+key:        Nina
+  hash:     4541612769508396389
+  bucket:   5
+  insert into bucket 5
+  insert added new 5
+Inserting Oliver:  34
+key:        Oliver
+  hash:     14635399443879730504
+  bucket:   8
+  insert into bucket 8
+  insert added new 8
+Inserting Paula:  39
+key:        Paula
+  hash:     7785208887448657225
+  bucket:   9
+  insert into bucket 9
+  insert added new 9
+Inserting Quinn:  23
+key:        Quinn
+  hash:     3468423811574704997
+  bucket:   5
+  insert into bucket 5
+  insert added new 5
+Inserting Ryan:  36
+key:        Ryan
+  hash:     11873203693593068848
+  bucket:   16
+  insert into bucket 16
+  insert added new 16
+Rehashing
+Old capacity:     32
+New capacity:     64
+
+
+Access using []
+
+30
+
+
+List all the names and ages
+
+  Uma: 24
+  Linda: 38
+  Bob: 30
+  Oliver: 34
+  Grace: 28
+  Paula: 39
+  Yara: 35
+  Willow: 32
+  Michael: 42
+  Victor: 37
+  Xander: 29
+  Isaac: 29
+  Eve: 22
+  Nina: 26
+  Quinn: 23
+  Alice: 25
+  David: 40
+  Julia: 31
+  Charlie: 35
+  Ryan: 36
+  Kevin: 27
+  Sophia: 30
+  Zara: 40
+  Hannah: 33
+  Frank: 45
+  Thomas: 41
+
+Uma:  24
+Uma:  24

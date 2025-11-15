@@ -9,6 +9,9 @@ https://www.youtube.com/watch?v=xnqTKD8uD64
 Back to Basics: Lambdas from Scratch, Arthur O'Dwyer, 2019
 https://www.youtube.com/watch?v=3jCOwajNch0
 
+Path Tracing Three Ways, Matt Godbolt, 2019
+https://www.youtube.com/watch?v=HG6c4Kwbv4I
+
 Modern C++: Unique Ptrs and Vectors, Dave Plummer, 2023
 https://www.youtube.com/watch?v=b8V-WIjlScA
 

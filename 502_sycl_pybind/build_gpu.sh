@@ -20,6 +20,11 @@ if [[ ! -d ".venv" ]]; then
     python3 -m pip install -U pip setuptools wheel pybind11 numpy
 fi
 
+#  Install if not already installed
+#apt update
+#apt install -y python3.10-dev
+#apt install -y python3.10-venv
+
 # Activate the virtual environment
 source .venv/bin/activate
 

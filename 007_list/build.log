@@ -1,0 +1,154 @@
+
+
+Part 1.
+##################################
+
+Create an empty list of doubles.
+Size: 0
+Empty? true
+
+
+
+Part 2.
+##################################
+
+Add 5 elements using an initializer list.
+Size after adding: 5
+First element: 1.1
+Last element: 5.5
+
+
+
+Part 3.
+##################################
+
+Accessing elements:
+list.front(): 1.1
+list.back(): 5.5
+
+Second element (via iterator): 2.2
+
+
+
+Part 4.
+##################################
+
+Modify third element (index 2) to 99.9.
+Check modified values:
+First: 1.1
+Third (modified): 99.9
+
+
+
+Part 5.
+##################################
+
+Remove last element with pop_back().
+Size after pop_back(): 4
+New last element: 4.4
+
+
+
+Part 6.
+##################################
+
+Insert 123.456 before position 2.
+[inspect_list]
+  address of list (object) : 0x7fff2cbf8670
+  list.size()              : 6
+  Elements:     0x62d1b30e42f0   1.1
+    0x62d1b30e4310   2.2
+    0x62d1b30e4370   123.456
+    0x62d1b30e4330   3.3
+    0x62d1b30e4350   4.4
+    0x62d1b30e42d0   5.5
+
+  front() = 1.1
+  back()  = 5.5
+
+
+
+Part 7.
+##################################
+
+Erase element at position 1.
+[inspect_list]
+  address of list (object) : 0x7fff2cbf8670
+  list.size()              : 4
+  Elements:     0x62d1b30e42d0   1.1
+    0x62d1b30e4330   3.3
+    0x62d1b30e4370   4.4
+    0x62d1b30e4310   5.5
+
+  front() = 1.1
+  back()  = 5.5
+
+
+
+Part 8.
+##################################
+
+Clear all elements with clear().
+Size after clear(): 0
+Empty? true
+
+
+
+Part 9.
+##################################
+
+Create a new list with initial values.
+numbers size: 5
+First: 10, Last: 50
+
+[inspect_list]
+  address of list (object) : 0x7fff2cbf8670
+  list.size()              : 5
+  Elements:     0x62d1b30e4350   10
+    0x62d1b30e42d0   20
+    0x62d1b30e4330   30
+    0x62d1b30e4370   40
+    0x62d1b30e4310   50
+
+  front() = 10
+  back()  = 50
+
+
+
+Part 10.
+##################################
+
+Create a new list with initial values.
+[inspect_list]
+  address of list (object) : 0x7fff2cbf8670
+  list.size()              : 5
+  Elements:     0x62d1b30e4310   10
+    0x62d1b30e4370   20
+    0x62d1b30e4330   30
+    0x62d1b30e42d0   40
+    0x62d1b30e4350   50
+
+  front() = 10
+  back()  = 50
+
+After insert before index 2: numbers[2] = 99
+Size: 6
+After erase at index 4: Size: 5
+First: 10, Last: 50
+
+Add 5 to front with push_front().
+New first: 5
+[inspect_list]
+  address of list (object) : 0x7fff2cbf8670
+  list.size()              : 6
+  Elements:     0x62d1b30e42d0   5
+    0x62d1b30e4310   10
+    0x62d1b30e4370   20
+    0x62d1b30e42f0   99
+    0x62d1b30e4330   30
+    0x62d1b30e4350   50
+
+  front() = 5
+  back()  = 50
+
+End of list demonstration.
